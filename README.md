@@ -162,11 +162,11 @@ create database news;
 
 8. Run `psql -d news -f newsdata.sql` to create the tables **authors**, **articles** and **log**. This will exit the psql terminal.
  
-9. Start the psql terminal with `psql` and move into the news database with `\c news`.
+9. Start the psql terminal with `psql` and move into the **news** database with `\c news`.
 
 10. Now open up another Command Prompt. Move to the project directory. Run `vagrant ssh` to move into the VM.
 
-11. Run the newsdata.py file with the following command after moving into the file's location to get the output:
+11. Run the **newsdata.py** file with the following command after moving into the file's location to get the output:
 
 ```
 python newsdata.py
