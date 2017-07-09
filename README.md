@@ -84,7 +84,13 @@ This project is an information reporting tool which provides information regardi
  
 9. Start the psql terminal with `psql` and move into the news database with `\c news`.
 
-10. Now open up another Command Prompt 
+10. Now open up another Command Prompt. Move to the project directory. Run `vagrant ssh` to move into the VM.
+
+11. Run the newsdata.py file with the following command after moving into the file's location:
+
+        `python newsdata.py`
+        
+
 
 ### Reference
 1. [Python Documentation](https://docs.python.org/3/)
