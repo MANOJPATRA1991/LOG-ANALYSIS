@@ -22,8 +22,10 @@ def main():
                 \tThe author has a total of {} views on his articles.\n"""
               .format(index + 1, name, views))
 
-    print("\n\tThe most logged errors, {}% were recorded on {}.\n"
-          .format(log[0][1], log[0][0]))
+    print("\n\tMOST LOGGED ERRORS (error > 1%):\n")
+    print("\tThe most logged errors were recorded as:\n ")
+    for index, (day, error) in enumerate(log):
+        print("\t\t{} ---- {}%\n".format(day, error))
 
 
 if __name__ == "__main__":
