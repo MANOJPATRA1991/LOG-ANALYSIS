@@ -117,7 +117,7 @@ The **newsdb.py** file contains the implementations for the three functions:
 2. `get_most_popular_authors()`
 3. `get_most_logged_errors()`
 
-In each of the these functions, a new connection object and cursor object was created as:
+In each of the these functions, a new Connection object and Cursor object are created as:
 
 ```
 DBNAME = "news"
@@ -128,7 +128,7 @@ cursor = conn.cursor()
 Then, the query is run using the `cursor.execute()` function.
 The data is fetched using `cursor.fetchall()` and stored in a local variable which is returned by the respective functions.
 
-Finally, the connection was closed using `conn.close()` within each function.
+Finally, the connection is closed using `conn.close()` within each function.
 
 ##### Executing the program
 
