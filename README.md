@@ -172,7 +172,7 @@ create database news;
 python newsdata.py
 ```
 
-To know the output looks [check here](LOG-ANALYSIS/log_analysis_output.txt)
+To know the output looks [check here](LOG-ANALYSIS/log_analysis_output.txt).
 
 ### Reference
 1. [Python Documentation](https://docs.python.org/3/)
