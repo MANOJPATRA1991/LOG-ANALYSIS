@@ -53,7 +53,7 @@ pep8 fileName.py
 
 3. Virtual Box
 
-To run the Virtual Machine, first we need to download it and then install it.
+To run the Virtual Machine, first, we need to download it and then install it.
 Virtual Box can be downloaded from [here](https://www.virtualbox.org/wiki/Downloads).
 
 4. Vagrant
@@ -151,7 +151,7 @@ vagrant init
 vagrant up
 ```
 
-4. Then to drop a full fledged SSH session, run the following command:
+4. Then to drop a full-fledged SSH session, run the following command:
         
 ```
 vagrant ssh
