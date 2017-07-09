@@ -1,7 +1,7 @@
 
-# LOG ANALYSIS 
+# LOGS ANALYSIS 
 
-This project was done as the third of 6 projects from the [Udacity Full Stack Nanodegree course](https://in.udacity.com/course/full-stack-web-developer-nanodegree--nd004/).
+This project is apart of Part 3 *The Backend: Databases & Applications* of the [Udacity Full Stack Nanodegree course](https://in.udacity.com/course/full-stack-web-developer-nanodegree--nd004/).
 
 ## Table of Contents
 1. [Installation](#installation)
