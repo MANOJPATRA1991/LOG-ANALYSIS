@@ -178,6 +178,9 @@ To know how the output looks [check here](log_analysis_output.txt).
 1. [Python Documentation](https://docs.python.org/3/)
 2. [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
 3. [PEP8](https://www.python.org/dev/peps/pep-0008/)
+4. [Vagrant](https://www.vagrantup.com/)
+5. [Oracle VM Virtual Box](https://www.virtualbox.org/)
+6. [PostgreSQL](https://www.postgresql.org/)
 
 ### License
 The content of this repository is licensed under [MIT](https://choosealicense.com/licenses/mit/).
