@@ -1,0 +1,35 @@
+        MOST POPULAR ARTICLES:
+
+                1. Candidate is jerk, alleges rival:
+
+                        This article has been viewed 338647 times till date.
+
+                2. Bears love berries, alleges bear:
+
+                        This article has been viewed 253801 times till date.
+
+                3. Bad things gone, say good people:
+
+                        This article has been viewed 170098 times till date.
+
+
+        MOST POPULAR AUTHORS:
+
+                1. Ursula La Multa:
+
+                        The author has a total of 507594 views on his articles.
+
+                2. Rudolf von Treppenwitz:
+
+                        The author has a total of 423457 views on his articles.
+
+                3. Anonymous Contributor:
+
+                        The author has a total of 170098 views on his articles.
+
+                4. Markoff Chaney:
+
+                        The author has a total of 84557 views on his articles.
+
+
+        The most logged errors, 2.26% were recorded on Sun, Jul 17, 2016.
