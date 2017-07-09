@@ -13,7 +13,7 @@ This project was done as the third of 6 projects from the [Udacity Full Stack Na
 
 **NOTE**: 
 
-This project was built on Windows 10 OS. All the interaction with the Virtual Box was done through Command Prompt on Windows.
+This project was built on **Windows 10** OS. All the interaction with the Virtual Machine was done through **Command Prompt on Windows**.
 
 (**Do not use Git Bash for this project. It simply won't work**.)
 
@@ -151,7 +151,7 @@ vagrant up
 vagrant ssh
 ```
         
-5. Type `psql` to switch to the interactive terminal for working with PostgresSQL.
+5. Type `psql` to switch to the interactive terminal for working with PostgreSQL.
 6. Now create a new database(if it doesn't exist already):
         
 ```
