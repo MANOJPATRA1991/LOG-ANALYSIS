@@ -9,7 +9,7 @@ def get_most_popular_articles():
     """Return three most popular articles of all time, most popular first"""
     # connect returns a Connection object or raises an exception.
     conn = psycopg2.connect(database=DBNAME)
-    # makes a Cursor object from a connection.
+    # makes a Cursor object from the connection.
     cursor = conn.cursor()
     cursor.execute("select title, views from articleShortInfo limit 3")
     data = cursor.fetchall()
@@ -18,10 +18,10 @@ def get_most_popular_articles():
 
 
 def get_most_popular_authors():
-    """Return three most popular articles of all time, most popular first"""
+    """Return popular authors, most popular first"""
     # connect returns a Connection object or raises an exception.
     conn = psycopg2.connect(database=DBNAME)
-    # makes a Cursor object from a connection.
+    # makes a Cursor object from the connection.
     cursor = conn.cursor()
     cursor.execute("""select name, sum(views) as views
                    from articleShortInfo
@@ -33,10 +33,10 @@ def get_most_popular_authors():
 
 
 def get_most_logged_errors():
-    """Return three most popular articles of all time, most popular first"""
+    """Return day with logged errors greater than 1%"""
     # connect returns a Connection object or raises an exception.
     conn = psycopg2.connect(database=DBNAME)
-    # makes a Cursor object from a connection.
+    # makes a Cursor object from the connection.
     cursor = conn.cursor()
     cursor.execute("""select  to_char(a.time, 'Dy, Mon DD, YYYY') as day,
                     round(a.errors*100/b.total::numeric, 2) as error
