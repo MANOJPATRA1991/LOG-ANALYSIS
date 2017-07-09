@@ -61,6 +61,12 @@ Virtual Box can be downloaded from [here](https://www.virtualbox.org/wiki/Downlo
 Vagrant is the software that configures the VM and lets you share files between your host computer and the VM's filesystem. 
 Vagrant can be downloaded from [here](https://www.vagrantup.com/downloads.html).
 
+5. `psycopg2` python module is required. To install:
+
+```
+pip3 install psycopg2
+```
+
 ### Description
 
 This project is an information reporting tool which provides information regarding the most popular articles, the most popular authors and the most logged errors in a day from a news database.
