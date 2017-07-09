@@ -12,7 +12,8 @@ This project was done as the third of 6 projects from the [Udacity Full Stack Na
 **NOTE**: 
 
 This project was built on Windows 10 OS. All the interaction with the Virtual Box was done through Command Prompt on Windows.
-**Do not use Git Bash for this project. It simply won't work**.
+
+(**Do not use Git Bash for this project. It simply won't work**.)
 
 1. Python
 
