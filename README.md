@@ -58,10 +58,28 @@ This project is an information reporting tool which provides information regardi
 1. Copy the python files to the folder which contains the newsdata.sql file.
 2. If the folder doesn't already contain a Vagrantfile. Run the following command to create one.
         
-    `vagrant init hashicorp/precise64`
-  
+        `vagrant init`
+    
+3. To start the virtual machine, from your local directory, run the following command:
+        
+        'vagrant up`
 
+4. Then to drop a full fledged SSH session, run the following command:
+        
+        'vagrant ssh'
+        
+5. Type `psql` to switch to the interactive terminal for working with PostgresSQL.
+6. Now create a new database(if it doesn't exist already):
+        
+        `create database news;`
+        
+7. Then exit with **Ctrl + D**.
 
+8. Run `psql -d news -f newsdata.sql` to create the tables **authors**, **articles** and **log**. This will exit the psql terminal.
+ 
+9. Start the psql terminal with `psql` and move into the news database with `\c news`.
+
+10. 
 
 ### Reference
 1. [Python Documentation](https://docs.python.org/3/)
