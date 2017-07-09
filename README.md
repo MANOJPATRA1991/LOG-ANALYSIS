@@ -5,11 +5,12 @@ This project was done as the third of 6 projects from the [Udacity Full Stack Na
 
 ## Table of Contents
 1. [Installation](#installation)
-3. [Description](#description)
-5. [Reference](#reference)
-6. [License](#license)
+2. [Description](#description)
+3. [Reference](#reference)
+4. [License](#license)
 
 ### Installation
+
 **NOTE**: 
 
 This project was built on Windows 10 OS. All the interaction with the Virtual Box was done through Command Prompt on Windows.
@@ -64,6 +65,71 @@ Vagrant can be downloaded from [here](https://www.vagrantup.com/downloads.html).
 
 This project is an information reporting tool which provides information regarding the most popular articles, the most popular authors and the most logged errors in a day from a news database.
 
+Following are the views that were created as part of the **news** database:
+
+1. MostViewedPaths
+
+```
+create view MostViewedPaths as (
+select path, count(*) as views
+from log
+where path like '/_%'
+group by path
+order by views desc);
+```
+
+2. articleShortInfo
+
+```
+create view articleShortInfo as (
+select a.title, c.name, b.views
+from articles as a join MostViewedPaths as b
+on concat('/article/', a.slug) = b.path
+join authors as c
+on a.author = c.id
+order by views desc);
+```
+
+3. LogRequests
+
+```
+create view LogRequests as (
+select time::timestamp::date, count(*) as total
+from log
+group by time::timestamp::date
+order by total desc);
+```
+
+4. ErrorRequests
+
+```
+create view ErrorRequests as (
+select time::timestamp::date, count(*) as errors
+from log
+where status like '4%' or status like '5%'
+group by time::timestamp::date
+order by errors desc);
+```
+
+The **newsdb.py** file contains the implementations for the three functions:
+
+1. `get_most_popular_articles()`
+2. `get_most_popular_authors()`
+3. `get_most_logged_errors()`
+
+In each of the these functions, a new connection object and cursor object was created as:
+
+```
+DBNAME = "news"
+conn = psycopg2.connect(database=DBNAME)
+cursor = conn.cursor()
+```
+
+Then, the query is run using the `cursor.execute()` function.
+The data is fetched using `cursor.fetchall()` and stored in a local variable which is returned by the respective functions.
+
+Finally, the connection was closed using `conn.close()` within each function.
+
 ##### Executing the program
 
 1. Copy the python files to the folder which contains the newsdata.sql file.
@@ -75,16 +141,22 @@ vagrant init
     
 3. To start the virtual machine, from your local directory, run the following command:
         
-`vagrant up`
+```
+vagrant up
+```
 
 4. Then to drop a full fledged SSH session, run the following command:
         
-`vagrant ssh`
+```
+vagrant ssh
+```
         
 5. Type `psql` to switch to the interactive terminal for working with PostgresSQL.
 6. Now create a new database(if it doesn't exist already):
         
-`create database news;`
+```
+create database news;
+```
         
 7. Then exit with **Ctrl + D**.
 
@@ -94,10 +166,11 @@ vagrant init
 
 10. Now open up another Command Prompt. Move to the project directory. Run `vagrant ssh` to move into the VM.
 
-11. Run the newsdata.py file with the following command after moving into the file's location:
+11. Run the newsdata.py file with the following command after moving into the file's location to get the output:
 
-`python newsdata.py`
-        
+```
+python newsdata.py
+```
 
 
 ### Reference
